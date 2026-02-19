@@ -22,7 +22,7 @@ exports.getHospital = async(req, res, next) => {
     try{
         const hospital = await Hospital.findById(req.params.id);
         if(!hospital){
-            return res.status(400).json({sucsess:false});
+            return res.status(400).json({success:false});
         }
         res.status(200).json({success:true,data:hospital});
     }catch(err){
